@@ -19,9 +19,12 @@
       <div class="gallery-grid">
         <div class="gallery-card">
           <h3>Foto Destaque</h3>
-          <img src="https://drive.google.com/uc?export=view&id=1SSUlP6c0qrG6lGN-T3i-RA0HFsS_v70E" 
-               alt="Foto destaque" 
-               style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;" />
+          <div style="width: 100%; height: 200px; background: #f5f5f5; border-radius: 8px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+            <img src="https://lh3.googleusercontent.com/d/1SSUlP6c0qrG6lGN-T3i-RA0HFsS_v70E" 
+                 alt="Foto destaque" 
+                 style="width: 100%; height: 100%; object-fit: cover;"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding: 20px; text-align: center; color: #666;\'><p>Clique no botão abaixo para ver a foto</p></div>';" />
+          </div>
           <a href="https://drive.google.com/file/d/1SSUlP6c0qrG6lGN-T3i-RA0HFsS_v70E/view?usp=sharing" target="_blank">Ver em tamanho maior</a>
         </div>
         <div class="gallery-card">
