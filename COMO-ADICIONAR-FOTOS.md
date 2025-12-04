@@ -199,3 +199,4 @@ Se precisar de ajuda, verifique:
 - `ESTRUTURA-PROJETO.md` - Estrutura do projeto
 - `INSTRUCOES-GOOGLE-SHEETS.md` - Configuração do Google Sheets
 
+

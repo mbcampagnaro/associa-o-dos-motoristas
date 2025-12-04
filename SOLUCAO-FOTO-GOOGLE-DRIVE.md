@@ -60,3 +60,4 @@ Se precisar de uma solução imediata, use um serviço de hospedagem de imagens:
 - **Cloudinary** (gratuito com limite)
 - Ou hospede diretamente no repositório GitHub
 
+
