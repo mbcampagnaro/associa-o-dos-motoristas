@@ -114,3 +114,4 @@ Cada componente está claramente identificado:
 - Scripts em `js/` são funcionalidades específicas
 - Estilos em `css/` são organizados por seção no arquivo
 
+
