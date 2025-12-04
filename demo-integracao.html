@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo - Integração Google Sheets</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .demo-section { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+    .code { background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-family: monospace; }
+    .step { margin: 15px 0; padding: 10px; background: white; border-left: 4px solid #00A94F; }
+    .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Demo - Sistema de Captura de Dados AMV</h1>
+  
+  <div class="demo-section">
+    <h2>O que foi implementado:</h2>
+    <ul>
+      <li>Página de captura de dados (`captura-rainha-2025.html`)</li>
+      <li>Formulário com validação de nome, email e WhatsApp</li>
+      <li>Integração com Google Sheets via Google Apps Script</li>
+      <li>Redirecionamento automático para as fotos após captura</li>
+      <li>Design responsivo e atrativo</li>
+    </ul>
+  </div>
+
+  <div class="demo-section">
+    <h2>Fluxo do usuário:</h2>
+    <div class="step">
+      <strong>1.</strong> Usuário clica em "Ver fotos" na galeria ou página inicial
+    </div>
+    <div class="step">
+      <strong>2.</strong> É redirecionado para a página de captura
+    </div>
+    <div class="step">
+      <strong>3.</strong> Preenche nome, email e WhatsApp
+    </div>
+    <div class="step">
+      <strong>4.</strong> Dados são validados e enviados para Google Sheets
+    </div>
+    <div class="step">
+      <strong>5.</strong> Usuário é redirecionado para as fotos no Google Drive
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <h2>Como configurar o Google Sheets:</h2>
+    <div class="warning">
+      <strong>IMPORTANTE:</strong> Siga as instruções no arquivo `INSTRUCOES-GOOGLE-SHEETS.md`
+    </div>
+    
+    <h3>1. Criar a planilha:</h3>
+    <div class="code">
+Nome | Email | WhatsApp | Data | Página
+    </div>
+
+    <h3>2. Configurar Google Apps Script:</h3>
+    <p>Use o código do arquivo `google-apps-script.js`</p>
+
+    <h3>3. Atualizar URL no site:</h3>
+    <p>Substitua a URL no arquivo `captura-rainha-2025.html`</p>
+  </div>
+
+  <div class="demo-section">
+    <h2>Recursos implementados:</h2>
+    <ul>
+      <li><strong>Validação em tempo real:</strong> Campos são validados conforme o usuário digita</li>
+      <li><strong>Máscara de WhatsApp:</strong> Formato automático (54) 99999-9999</li>
+      <li><strong>Feedback visual:</strong> Loading, sucesso e erro</li>
+      <li><strong>Design responsivo:</strong> Funciona em mobile e desktop</li>
+      <li><strong>Integração segura:</strong> Dados enviados via POST para Google Sheets</li>
+    </ul>
+  </div>
+
+  <div class="demo-section">
+    <h2>Dados capturados:</h2>
+    <p>O sistema captura e armazena:</p>
+    <ul>
+      <li>Nome completo do visitante</li>
+      <li>E-mail para contato</li>
+      <li>WhatsApp para comunicação</li>
+      <li>Data e hora da captura</li>
+      <li>Página de origem (Escolha da Rainha 2025)</li>
+    </ul>
+  </div>
+
+  <div class="demo-section">
+    <h2>Próximos passos:</h2>
+    <ol>
+      <li>Configure o Google Sheets seguindo as instruções</li>
+      <li>Teste o formulário de captura</li>
+      <li>Monitore os dados na planilha</li>
+      <li>Use os contatos para marketing e comunicação</li>
+    </ol>
+  </div>
+
+  <div class="demo-section">
+    <h2>Arquivos criados/modificados:</h2>
+    <ul>
+      <li><code>captura-rainha-2025.html</code> - Página de captura</li>
+      <li><code>google-apps-script.js</code> - Script para Google Sheets</li>
+      <li><code>INSTRUCOES-GOOGLE-SHEETS.md</code> - Guia de configuração</li>
+      <li><code>galeria.html</code> - Modificado para redirecionar</li>
+      <li><code>index.html</code> - Modificado para redirecionar</li>
+    </ul>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="captura-rainha-2025.html" style="background: #00A94F; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+      Testar Página de Captura
+    </a>
+    <br><br>
+    <a href="https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing" target="_blank" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+      Ver Fotos da Rainha 2025 (Link Direto)
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- estrutura.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estrutura – AMV</title>
+  <link rel="icon" href="img/logo-amv.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header Component -->
+  <div id="header-container"></div>
+
+      
+
+  <main>
+    <section class="card">
+      <h2>Conheça Nossa Estrutura</h2>
+      <p>Oferecemos:</p>
+      <ul class="beneficios-list">
+        <li>Campo de futebol gramado</li>
+        <li>Churrasqueiras equipadas</li>
+        <li>Área para acampamentos</li>
+        <li>Quadras de vôlei</li>
+        <li>Salão de festas e espaço de lazer</li>
+        <li>Parque infantil</li>
+      </ul>
+      <!-- Aqui você pode adicionar imagens leves ou ícones representativos -->
+    </section>
+
+    <!-- Localizações -->
+    <section class="card">
+      <h2>Nossas Localizações</h2>
+      
+      <div class="mapas-container">
+        <div class="mapa-item">
+          <h3>Sede da Associação</h3>
+          <p>Rua Francisco Ferreira Boeira, Chácara das Palmeiras<br>Vacaria – RS</p>
+          <p class="horario-localizacao">Seg–Sáb: 13:30 às 18:00</p>
+          <div class="mapa-wrapper">
+            <iframe 
+              src="https://www.google.com/maps?q=Rua+Francisco+Ferreira+Boeira,+Chácara+das+Palmeiras,+Vacaria+-+RS&output=embed"
+              width="100%" 
+              height="300" 
+              style="border:0; border-radius: 8px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização da Sede da Associação">
+            </iframe>
+          </div>
+          <a href="https://maps.app.goo.gl/8krSkomqmc5SShoV8" target="_blank" class="btn-mapa">Abrir no Google Maps</a>
+        </div>
+
+        <div class="mapa-item">
+          <h3>Escritório Administrativo</h3>
+          <p>Av. Pres. Juscelino Kubitschek de Oliveira, Nº 8619<br>Jardim dos Pampas, Vacaria – RS</p>
+          <p class="horario-localizacao">Seg–Sex: 13:30 às 18:00</p>
+          <div class="mapa-wrapper">
+            <iframe 
+              src="https://www.google.com/maps?q=Av.+Pres.+Juscelino+Kubitschek+de+Oliveira,+8619,+Jardim+dos+Pampas,+Vacaria+-+RS&output=embed"
+              width="100%" 
+              height="300" 
+              style="border:0; border-radius: 8px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização do Escritório Administrativo">
+            </iframe>
+          </div>
+          <a href="https://maps.app.goo.gl/nq6xWaxtz2NMe6ek6" target="_blank" class="btn-mapa">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <div id="footer-container"></div>
+
+  <!-- WhatsApp Float Component -->
+  <div id="whatsapp-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/components-loader.js"></script>
+  <script src="js/menu-toggle.js"></script>
+  
+</body>
+</html>
