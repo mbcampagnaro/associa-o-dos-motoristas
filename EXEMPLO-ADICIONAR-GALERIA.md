@@ -142,3 +142,4 @@ Para manter as galerias ordenadas (mais recente primeiro), adicione o novo card 
 ```
 
 
+

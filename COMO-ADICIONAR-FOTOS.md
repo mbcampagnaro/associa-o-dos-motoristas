@@ -200,3 +200,4 @@ Se precisar de ajuda, verifique:
 - `INSTRUCOES-GOOGLE-SHEETS.md` - Configuração do Google Sheets
 
 
+

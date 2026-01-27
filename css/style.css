@@ -117,12 +117,13 @@ nav a:hover {
 
 /* Main */
 main { 
-  padding: 30px 20px; 
+  padding: 30px 20px 60px; 
   flex: 1;
   margin-top: 100px;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: calc(100vh - 200px);
 }
 
 /* Card padrão */
@@ -131,7 +132,7 @@ main {
   border: 1px solid var(--border-gray); 
   border-radius: 8px;
   padding: 25px 20px; 
-  margin: 0 auto 20px; 
+  margin: 0 auto 40px; 
   max-width: 1000px;
   width: 100%;
   text-align: center; 
@@ -180,9 +181,54 @@ main {
   margin-bottom: 0;
 }
 
+.destaques-home .card .btn-inscreva {
+  margin-top: 4px;
+}
+
 .destaques-home .card:hover { 
-  transform: translateY(-3px); 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+  transform: none; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+}
+
+/* Destaque especial para Festa 2026 */
+.card-destaque-festa {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9f4 100%);
+  border: 2px solid var(--brand-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-destaque-festa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+}
+
+.card-destaque-festa h2 {
+  color: var(--brand-green);
+  font-weight: 600;
+  position: relative;
+}
+
+.card-destaque-festa:hover {
+  transform: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-color: var(--brand-green);
+}
+
+.card-destaque-festa .btn-inscreva {
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+  box-shadow: 0 4px 12px rgba(0, 169, 79, 0.3);
+}
+
+.card-destaque-festa .btn-inscreva:hover {
+  background: linear-gradient(135deg, var(--brand-green-dark) 0%, var(--brand-green) 100%);
+  box-shadow: 0 6px 16px rgba(0, 169, 79, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Benefícios */
@@ -488,6 +534,44 @@ main {
 
 .gallery-card a:hover { 
   background: var(--brand-green-dark); 
+}
+
+/* Destaque para Festa 2026 na galeria */
+.gallery-card-destaque {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9f4 100%);
+  border: 2px solid var(--brand-green);
+  position: relative;
+}
+
+.gallery-card-destaque::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+}
+
+.gallery-card-destaque h3 {
+  color: var(--brand-green);
+  font-weight: 600;
+}
+
+.gallery-card-destaque:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 169, 79, 0.15);
+  border-color: var(--brand-green-dark);
+}
+
+.gallery-card-destaque a {
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+  box-shadow: 0 4px 12px rgba(0, 169, 79, 0.3);
+}
+
+.gallery-card-destaque a:hover {
+  background: linear-gradient(135deg, var(--brand-green-dark) 0%, var(--brand-green) 100%);
+  box-shadow: 0 6px 16px rgba(0, 169, 79, 0.4);
 }
 
 .gallery-card img {
@@ -811,9 +895,84 @@ footer .container {
   border-radius: 20px;
   font-size: 0.85em;
   font-weight: 500;
-  margin-left: 15px;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+/* Evento Passado Detalhado */
+.evento-passado-detalhado {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.evento-passado-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.evento-passado-header h3 {
+  color: #6c757d;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  word-wrap: break-word;
+  letter-spacing: -0.01em;
+}
+
+.data-evento-passado {
+  color: #868e96;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.evento-passado-header .status-passado {
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+.programacao-detalhada.passada {
+  opacity: 0.85;
+}
+
+.programacao-detalhada.passada h4 {
+  color: #6c757d;
+  border-bottom-color: #dee2e6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.dia-evento.passado {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  opacity: 0.9;
+}
+
+.dia-evento.passado h5 {
+  color: #6c757d;
+  border-left-color: #adb5bd;
+  font-size: 1.05em;
+}
+
+.dia-evento.passado li {
+  color: #6c757d;
+}
+
+.dia-evento.passado li:before {
+  color: #adb5bd;
 }
 
 /* Mapas */
@@ -1197,6 +1356,38 @@ footer .container {
     align-self: flex-start;
     padding: 6px 12px;
     font-size: 0.85em;
+  }
+
+  .evento-passado-detalhado {
+    padding: 15px;
+    margin: 12px 0;
+  }
+
+  .evento-passado-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .evento-passado-header h3 {
+    font-size: 1.15em;
+  }
+
+  .data-evento-passado {
+    font-size: 0.95em;
+  }
+
+  .programacao-detalhada.passada h4 {
+    font-size: 1em;
+  }
+
+  .dia-evento.passado {
+    padding: 12px;
+  }
+
+  .dia-evento.passado h5 {
+    font-size: 1em;
   }
 
   .whatsapp-float {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escolha da Rainha 2025 - AMV</title>
+  <title>Acesso às Fotos - AMV</title>
   
   <!-- Favicon -->
   <link rel="icon" href="img/logo-amv.png" type="image/png" />
@@ -236,8 +236,8 @@
   <main>
     <div class="capture-container">
       <div class="capture-header">
-        <h1>Escolha da Rainha 2025</h1>
-        <p>Preencha seus dados para acessar as fotos exclusivas da 16ª Escolha das Soberanas da AMV</p>
+        <h1>Acesso às Fotos</h1>
+        <p>Preencha seus dados para acessar as fotos exclusivas dos eventos da AMV</p>
       </div>
 
       <form id="captureForm">
@@ -260,7 +260,7 @@
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">
-          Acessar Fotos da Rainha 2025
+          Acessar Fotos
         </button>
       </form>
 
@@ -273,7 +273,7 @@
         <p>Você será redirecionado para as fotos em alguns segundos...</p>
         <a href="https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing" 
            target="_blank" class="whatsapp-link" id="fotosLink">
-          Ver Fotos da Rainha 2025
+          Ver Fotos
         </a>
       </div>
 
@@ -347,6 +347,23 @@
       e.target.value = value;
     });
 
+    // Função para obter parâmetro da URL
+    function getURLParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // Obter link de redirecionamento da URL
+    const redirectLink = getURLParameter('redirect') || 'https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing';
+    
+    // Atualizar link no botão de sucesso quando a página carregar
+    document.addEventListener('DOMContentLoaded', function() {
+      const fotosLink = document.getElementById('fotosLink');
+      if (fotosLink && redirectLink) {
+        fotosLink.href = redirectLink;
+      }
+    });
+
     // Envio do formulário
     document.getElementById('captureForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -370,7 +387,7 @@
         email: document.getElementById('email').value.trim(),
         whatsapp: document.getElementById('whatsapp').value.trim(),
         data: new Date().toLocaleString('pt-BR'),
-        pagina: 'Escolha da Rainha 2025'
+        pagina: 'Acesso às Fotos - Galeria AMV'
       };
 
       try {
@@ -389,9 +406,18 @@
           loading.style.display = 'none';
           successMessage.style.display = 'block';
           
-          // Redirecionar após 3 segundos
+          // Salvar flag de acesso no localStorage
+          localStorage.setItem('galeria_acesso_autorizado', 'true');
+          localStorage.setItem('galeria_dados_usuario', JSON.stringify({
+            nome: formData.nome,
+            email: formData.email,
+            whatsapp: formData.whatsapp,
+            dataAcesso: formData.data
+          }));
+          
+          // Redirecionar para o link específico após 3 segundos
           setTimeout(() => {
-            window.open('https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing', '_blank');
+            window.open(redirectLink, '_blank');
           }, 3000);
         }, 1500);
 
