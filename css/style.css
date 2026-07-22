@@ -163,6 +163,11 @@ main {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
 
+/* Destaque principal (busca por placa) */
+.destaque-busca {
+  margin-bottom: 14px;
+}
+
 /* Destaques lado a lado */
 .destaques-home {
   display: flex; 
