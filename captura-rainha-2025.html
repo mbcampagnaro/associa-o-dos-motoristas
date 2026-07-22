@@ -353,8 +353,30 @@
       return urlParams.get(name);
     }
 
-    // Obter link de redirecionamento da URL
-    const redirectLink = getURLParameter('redirect') || 'https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing';
+    // Destino padrão caso nenhum redirect válido seja informado
+    const DEFAULT_REDIRECT = 'https://drive.google.com/drive/folders/17BCh8PzznRFT6B4ZvAPujntHpLKUFhr2?usp=sharing';
+
+    // Domínios permitidos para redirecionamento (evita open redirect)
+    const ALLOWED_REDIRECT_HOSTS = ['drive.google.com', 'docs.google.com'];
+
+    // Valida o parâmetro 'redirect' contra uma allowlist. Só aceita
+    // links https do Google Drive/Docs; qualquer outra coisa cai no padrão.
+    function getSafeRedirect() {
+      const raw = getURLParameter('redirect');
+      if (!raw) return DEFAULT_REDIRECT;
+      try {
+        const url = new URL(raw, window.location.origin);
+        if (url.protocol === 'https:' && ALLOWED_REDIRECT_HOSTS.includes(url.hostname)) {
+          return url.href;
+        }
+      } catch (e) {
+        // URL malformada — usa o padrão
+      }
+      return DEFAULT_REDIRECT;
+    }
+
+    // Obter link de redirecionamento validado da URL
+    const redirectLink = getSafeRedirect();
     
     // Atualizar link no botão de sucesso quando a página carregar
     document.addEventListener('DOMContentLoaded', function() {
