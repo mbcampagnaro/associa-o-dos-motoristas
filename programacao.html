@@ -4,9 +4,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programação – AMV</title>
+  <title>27ª Festa dos Motoristas – Programação – AMV</title>
+  <meta name="description" content="27ª Festa da Associação dos Motoristas de Vacaria: 08, 09 e 10 de janeiro de 2027, em Vacaria – RS. Confira a programação completa e baixe o cartaz oficial." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="27ª Festa da Associação dos Motoristas de Vacaria" />
+  <meta property="og:description" content="08, 09 e 10 de janeiro de 2027 (sexta, sábado e domingo), em Vacaria – Rio Grande do Sul. Realização: AMV – Associação dos Motoristas de Vacaria." />
+  <meta property="og:image" content="https://www.associacaodosmotoristas.com.br/img/cartaz-27-festa-2027-1200.jpg" />
+  <meta property="og:url" content="https://www.associacaodosmotoristas.com.br/programacao.html" />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="img/logo-amv.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Dados estruturados do evento -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "27ª Festa da Associação dos Motoristas de Vacaria",
+    "description": "27ª Festa da Associação dos Motoristas de Vacaria – \"A força que vem da estrada\". 08, 09 e 10 de janeiro de 2027 (sexta, sábado e domingo), em Vacaria – Rio Grande do Sul.",
+    "startDate": "2027-01-08",
+    "endDate": "2027-01-10",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "image": "https://www.associacaodosmotoristas.com.br/img/cartaz-27-festa-2027-1200.jpg",
+    "location": {
+      "@type": "Place",
+      "name": "Vacaria – Rio Grande do Sul",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vacaria",
+        "addressRegion": "RS",
+        "addressCountry": "BR"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "AMV – Associação dos Motoristas de Vacaria",
+      "url": "https://www.associacaodosmotoristas.com.br"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Header Component -->
@@ -16,7 +54,66 @@
       <main>
         <section class="card">
           <h2>Próximos Eventos</h2>
-          <p>Em breve divulgaremos os próximos eventos da AMV. Fique atento às nossas redes sociais!</p>
+
+          <div class="evento-destaque">
+            <h3>27ª Festa da Associação dos Motoristas de Vacaria</h3>
+            <p class="data-evento">08, 09 e 10 de janeiro de 2027 (sexta, sábado e domingo)</p>
+            <p class="local-evento">Vacaria – Rio Grande do Sul</p>
+            <p class="lema-evento">"A força que vem da estrada"</p>
+
+            <figure class="cartaz-festa">
+              <a href="img/cartaz-27-festa-2027-1200.jpg" target="_blank" rel="noopener" title="Abrir cartaz ampliado">
+                <picture>
+                  <source media="(max-width: 600px)" type="image/webp" srcset="img/cartaz-27-festa-2027-600.webp" />
+                  <source media="(max-width: 600px)" type="image/jpeg" srcset="img/cartaz-27-festa-2027-600.jpg" />
+                  <source type="image/webp" srcset="img/cartaz-27-festa-2027-1200.webp" />
+                  <img
+                    src="img/cartaz-27-festa-2027-1200.jpg"
+                    alt="Cartaz da 27ª Festa da Associação dos Motoristas de Vacaria, de 08 a 10 de janeiro de 2027"
+                    width="1200"
+                    height="1682"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+              <figcaption>
+                <a href="img/cartaz-27-festa-2027.pdf" class="btn-inscreva btn-baixar-cartaz" download>Baixar cartaz</a>
+              </figcaption>
+            </figure>
+
+            <div class="programacao-detalhada">
+              <h4>PROGRAMAÇÃO</h4>
+
+              <div class="dia-evento">
+                <h5>Sexta-feira – 08/01/2027</h5>
+                <ul>
+                  <li><strong class="hora">20h30</strong> – Jantar dançante</li>
+                  <li><strong class="hora">Cardápio:</strong> tortéi, galeto, pão e saladas</li>
+                  <li><strong class="hora">Animação:</strong> Os Vacarianos</li>
+                </ul>
+              </div>
+
+              <div class="dia-evento">
+                <h5>Sábado – 09/01/2027</h5>
+                <ul>
+                  <li><strong class="hora">08h00</strong> – Início do torneio de futebol</li>
+                  <li><strong class="hora">12h00</strong> – Almoço com churrasco, maionese e saladas</li>
+                  <li><strong class="hora">À tarde</strong> – Sequência do torneio de futebol e exposição de caminhões Fórmula Truck</li>
+                  <li><strong class="hora">À noite</strong> – Jantar carreteiro com maionese e saladas</li>
+                </ul>
+              </div>
+
+              <div class="dia-evento">
+                <h5>Domingo – 10/01/2027</h5>
+                <ul>
+                  <li><strong class="hora">08h30</strong> – Procissão motorizada (saída em frente à Transportes Cavalinho)</li>
+                  <li><strong class="hora">11h00</strong> – Missa campal no salão externo da sede</li>
+                  <li><strong class="hora">12h30</strong> – Almoço com churrasco, maionese e saladas</li>
+                  <li><strong class="hora">À tarde</strong> – Final do torneio de futebol, sorteio de brindes e show de encerramento com Banda Barbarella</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
         
         <section class="card eventos-passados">
